@@ -264,37 +264,10 @@ The comparison should be based on the measured:
 
 The final conclusion should be written **only after collecting the actual benchmark results**.
 
----
 
-## 📁 Suggested Repository Structure
 
-```text
-hypervisor-performance-analysis/
-│
-├── README.md
-│
-├── results/
-│   ├── proxmox-results.txt
-│   ├── vmware-results.txt
-│   └── comparison.csv
-│
-├── graphs/
-│   ├── events-per-second.png
-│   ├── execution-time.png
-│   ├── average-latency.png
-│   └── resource-utilization.png
-│
-├── screenshots/
-│   ├── proxmox-vm.png
-│   ├── vmware-vm.png
-│   ├── sysbench-proxmox.png
-│   └── sysbench-vmware.png
-│
-└── documentation/
-    └── experiment-notes.md
-```
 
----
+
 
 ## 🚀 Conclusion
 
