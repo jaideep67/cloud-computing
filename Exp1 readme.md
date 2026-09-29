@@ -10,7 +10,7 @@ This project experimentally compares the CPU performance of two different virtua
 The experiment uses identically configured Ubuntu virtual machines and the **Sysbench CPU benchmark** to measure and compare their performance.
 
 
-<img width="670" height="344" alt="image" src="https://github.com/user-attachments/assets/414c4b7b-63d1-4245-abe8-9dc2237cd5ad" /> <img width="670" height="350" alt="image" src="https://github.com/user-attachments/assets/9fe12fe8-5751-4041-af41-34eeb348cad8" />
+
 
 
 ---
@@ -75,6 +75,10 @@ Physical Hardware
     2 GB RAM
     20 GB Disk
 ```
+<img width="2064" height="1332" alt="image" src="https://github.com/user-attachments/assets/3c18f002-6b6b-4a19-9e93-57e5f11bfbba" />
+
+
+
 
 ### Type-2 Hypervisor — VMware Workstation
 
@@ -96,6 +100,7 @@ VMware Workstation
     2 GB RAM
     20 GB Disk
 ```
+<img width="2024" height="1084" alt="image" src="https://github.com/user-attachments/assets/57580bb5-c0ae-4f48-a4da-b7df562b23b8" />
 
 ---
 
@@ -175,13 +180,24 @@ The recommended graphs for this experiment are:
 
 Compare the CPU throughput of Proxmox VE and VMware Workstation.
 
+<img width="1462" height="872" alt="image" src="https://github.com/user-attachments/assets/19133c9a-51be-4ed9-8a1e-9478b5d82d48" />
+
+
 ### Graph 2 — Total Execution Time
 
 Compare how long each virtual machine takes to complete the same CPU workload.
 
+<img width="1464" height="878" alt="image" src="https://github.com/user-attachments/assets/f704bc65-300f-4fa4-850f-135fd8eb7f70" />
+
+
 ### Graph 3 — Average Latency
 
 Compare the average time required to process benchmark events.
+
+<img width="1468" height="946" alt="image" src="https://github.com/user-attachments/assets/413a7a51-5972-4cd4-8795-29a5f669f40f" />
+<img width="1470" height="898" alt="image" src="https://github.com/user-attachments/assets/197303d6-9ade-4c3e-b734-98e4e0d1ed06" />
+
+
 
 ### Graph 4 — Resource Utilization
 
@@ -190,6 +206,9 @@ If CPU and memory observations are collected using `top`, Proxmox VE and VMware 
 * CPU utilization
 * Memory utilization
 * Load average
+
+<img width="1472" height="860" alt="image" src="https://github.com/user-attachments/assets/0c921ffb-f36b-4316-95f0-d633fd42a810" />
+
 
 ---
 
