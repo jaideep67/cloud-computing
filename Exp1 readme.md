@@ -9,6 +9,10 @@ This project experimentally compares the CPU performance of two different virtua
 
 The experiment uses identically configured Ubuntu virtual machines and the **Sysbench CPU benchmark** to measure and compare their performance.
 
+
+<img width="670" height="344" alt="image" src="https://github.com/user-attachments/assets/414c4b7b-63d1-4245-abe8-9dc2237cd5ad" /> <img width="670" height="350" alt="image" src="https://github.com/user-attachments/assets/9fe12fe8-5751-4041-af41-34eeb348cad8" />
+
+
 ---
 
 ## 📌 Objective
