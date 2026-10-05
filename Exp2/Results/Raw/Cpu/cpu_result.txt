@@ -1,0 +1,126 @@
+CPU BENCHMARK RESULTS - VM
+
+Sysbench Version: 1.0.20
+Prime Number Limit: 20000
+Test Duration: 30 seconds
+
+--------------------------------------------------
+RUN 1 - 1 THREAD
+--------------------------------------------------
+Threads: 1
+Events per Second: 1758.83
+Total Time: 30.0004 s
+Total Events: 52767
+Average Latency: 0.57 ms
+Maximum Latency: 1.95 ms
+95th Percentile Latency: 0.60 ms
+
+--------------------------------------------------
+RUN 1 - 2 THREADS
+--------------------------------------------------
+Threads: 2
+Events per Second: 3517.35
+Total Time: 30.0004 s
+Total Events: 105525
+Average Latency: 0.57 ms
+Maximum Latency: 3.98 ms
+95th Percentile Latency: 0.59 ms
+
+--------------------------------------------------
+RUN 1 - 4 THREADS
+--------------------------------------------------
+Threads: 4
+Events per Second: 6617.20
+Total Time: 30.0006 s
+Total Events: 198526
+Average Latency: 0.60 ms
+Maximum Latency: 7.61 ms
+95th Percentile Latency: 0.65 ms
+
+--------------------------------------------------
+RUN 1 - 8 THREADS
+--------------------------------------------------
+Threads: 8
+Events per Second: 6389.73
+Total Time: 30.0010 s
+Total Events: 191703
+Average Latency: 1.25 ms
+Maximum Latency: 14.61 ms
+95th Percentile Latency: 3.62 ms
+
+==================================================
+RUN 2 RESULTS
+==================================================
+
+--------------------------------------------------
+RUN 2 - 1 THREAD
+--------------------------------------------------
+Threads: 1
+Events per Second: 1733.59
+Total Time: 30.0005 s
+Total Events: 52010
+Average Latency: 0.58 ms
+Maximum Latency: 1.53 ms
+95th Percentile Latency: 0.61 ms
+
+--------------------------------------------------
+RUN 2 - 2 THREADS
+--------------------------------------------------
+Threads: 2
+Events per Second: 3513.60
+Total Time: 30.0003 s
+Total Events: 105412
+Average Latency: 0.57 ms
+Maximum Latency: 1.68 ms
+95th Percentile Latency: 0.60 ms
+
+--------------------------------------------------
+RUN 2 - 4 THREADS
+--------------------------------------------------
+Threads: 4
+Events per Second: 6826.48
+Total Time: 30.0014 s
+Total Events: 204810
+Average Latency: 0.59 ms
+Maximum Latency: 5.78 ms
+95th Percentile Latency: 0.62 ms
+
+--------------------------------------------------
+RUN 2 - 8 THREADS
+--------------------------------------------------
+Threads: 8
+Events per Second: 6523.44
+Total Time: 30.0009 s
+Total Events: 195715
+Average Latency: 1.23 ms
+Maximum Latency: 18.75 ms
+95th Percentile Latency: 3.62 ms
+
+==================================================
+SUMMARY
+==================================================
+
+Threads    Run 1 Events/sec    Run 2 Events/sec
+--------------------------------------------------
+1          1758.83             1733.59
+2          3517.35             3513.60
+4          6617.20             6826.48
+8          6389.73             6523.44
+
+==================================================
+KEY OBSERVATION
+==================================================
+
+CPU performance increases significantly from 1 to 4 threads.
+
+The highest CPU performance was obtained with 4 threads
+in both runs.
+
+Run 1 - 4 Threads: 6617.20 events/sec
+Run 2 - 4 Threads: 6826.48 events/sec
+
+Performance slightly decreases when increasing from
+4 to 8 threads, while latency increases.
+
+This indicates that using more threads beyond the available
+CPU capacity does not necessarily improve performance.
