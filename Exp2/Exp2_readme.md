@@ -118,3 +118,70 @@ The experimental setup can be summarized as follows:
                               |
                               v
                       Comparison Graphs
+```
+
+## Methodology
+
+The experiments were conducted inside the Ubuntu 22.04 VM.
+
+The VM environment was benchmarked directly. Docker workloads were executed inside the same Ubuntu VM using controlled CPU and memory limits.
+
+The implemented workload categories were:
+
+- CPU baseline
+- Memory
+- Disk I/O
+- FastAPI application
+
+Raw benchmark output was stored under `results/raw/`. The raw results were processed using `scripts/analyze_results.py`. The processed CSV files were generated under `results/processed/`. Comparison graphs were generated using `scripts/generate_plots.py` and stored under `results/figures/`.
+
+The methodology and experimental procedure are additionally documented in `docs/methodology.md`.
+
+---
+
+## CPU Experiment
+
+### Tool
+
+Sysbench 1.0.20 was used for the CPU benchmark.
+
+The recorded benchmark configuration included:
+
+- Number of threads: 4
+- Prime number limit: 20000
+- Test duration: approximately 30 seconds
+
+### Result
+
+| Metric | Measured Value |
+|---|---:|
+| Sysbench version | 1.0.20 |
+| Threads | 4 |
+| Prime number limit | 20000 |
+| Total time | 30.0005 s |
+| Total events | 146649 |
+| CPU speed | 4888.02 events/sec |
+| Minimum latency | 0.40 ms |
+| Average latency | 0.82 ms |
+| Maximum latency | 19.79 ms |
+| 95th percentile latency | 2.43 ms |
+
+The raw CPU output is preserved at:
+
+`results/raw/baseline/cpu.txt`
+
+---
+
+## Memory Experiment
+
+### Benchmark
+
+Memory performance was measured using Sysbench.
+
+The workload used:
+
+```text
+Memory block size: 1M
+Total memory workload: 10G
+Threads: 4
+Runs per environment: 10
