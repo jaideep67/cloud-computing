@@ -1,0 +1,132 @@
+DISK I/O BENCHMARK RESULTS - DOCKER CONTAINER
+
+Benchmark Tool: fio-3.36
+
+==================================================
+RUN 1 - RANDOM READ
+==================================================
+
+Block Size: 4K
+IO Engine: psync
+IO Depth: 16
+
+IOPS: 14662
+Bandwidth: 57.3 MiB/s (60.1 MB/s)
+
+Completion Latency:
+Minimum: 41 us
+Average: 67.69 us
+Maximum: 3000 us
+
+Latency Percentiles:
+50th: 67 us
+90th: 76 us
+99th: 115 us
+99.9th: 221 us
+
+CPU System Usage: 31.84%
+Disk Utilization: 83.9%
+
+==================================================
+RUN 1 - SEQUENTIAL WRITE
+==================================================
+
+Block Size: 1M
+IO Engine: psync
+IO Depth: 16
+
+IOPS: 1622
+Bandwidth: 1623.0 MiB/s (1702.0 MB/s)
+
+Completion Latency:
+Minimum: 418 us
+Average: 604.5 us
+Maximum: 17088 us
+
+Latency Percentiles:
+50th: 570 us
+90th: 701 us
+99th: 1012 us
+99.9th: 3392 us
+
+CPU System Usage: 81.84%
+Disk Utilization: 94.09%
+
+==================================================
+RUN 2 - RANDOM READ
+==================================================
+
+Block Size: 4K
+IO Engine: psync
+IO Depth: 16
+
+IOPS: 14825
+Bandwidth: 58.0 MiB/s (60.8 MB/s)
+
+Completion Latency:
+Minimum: 38 us
+Average: 66.8 us
+Maximum: 3910 us
+
+Latency Percentiles:
+50th: 64 us
+90th: 78 us
+99th: 124 us
+99.9th: 392 us
+
+CPU System Usage: 32.94%
+Disk Utilization: 86.5%
+
+==================================================
+RUN 2 - SEQUENTIAL WRITE
+==================================================
+
+Block Size: 1M
+IO Engine: psync
+IO Depth: 16
+
+IOPS: 1429
+Bandwidth: 1429.0 MiB/s (1499.0 MB/s)
+
+Completion Latency:
+Minimum: 431 us
+Average: 688.09 us
+Maximum: 1695100 us
+
+Latency Percentiles:
+50th: 553 us
+90th: 652 us
+99th: 1074 us
+99.9th: 3982 us
+
+CPU System Usage: 69.29%
+Disk Utilization: 94.66%
+
+==================================================
+SUMMARY
+==================================================
+
+Test                  Run 1              Run 2
+--------------------------------------------------
+Random Read IOPS      14662              14825
+Random Read BW        57.3 MiB/s         58.0 MiB/s
+Sequential Write IOPS 1622               1429
+Sequential Write BW   1623.0 MiB/s       1429.0 MiB/s
+
+==================================================
+KEY OBSERVATION
+==================================================
+
+Random read performance remained consistent across both
+runs, with approximately 57-58 MiB/s bandwidth.
+
+Sequential write performance was higher in Run 1 than
+Run 2, with bandwidth decreasing from 1623.0 MiB/s to
+1429.0 MiB/s.
+
+Random read achieved much higher IOPS than sequential
+write because random reads use smaller 4K blocks, while
+sequential writes use 1M blocks.
+
+Disk utilization was high during both sequential write
+tests, reaching approximately 94%.
