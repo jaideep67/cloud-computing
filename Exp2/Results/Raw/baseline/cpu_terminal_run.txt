@@ -1,0 +1,22 @@
+CPU BENCHMARK RESULT
+
+Sysbench Version: 1.0.20
+Number of Threads: 4
+Prime Numbers Limit: 20000
+Test Duration: 30 seconds
+
+CPU Speed:
+Events per second: 6736.23
+
+General Statistics:
+Total Time: 30.0007 seconds
+Total Number of Events: 202098
+
+Latency:
+Minimum: 0.57 ms
+Average: 0.59 ms
+Maximum: 7.64 ms
+95th Percentile: 0.64 ms
+
+Threads Fairness:
+Events (avg/stddev): 50524.5000 / 428.45
